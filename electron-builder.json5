@@ -1,0 +1,19 @@
+/**
+ * @see https://www.electron.build/configuration/configuration
+ */
+{
+  appId: 'YourAppID',
+  asar: true,
+  directories: {
+    output: 'release/${version}',
+  },
+  files: ['dist-electron', 'dist'],
+  win: {
+    target: [
+      {
+        target: 'nsis',
+      },
+    ],
+    artifactName: '${productName}_${version}.${ext}',
+  },
+}
